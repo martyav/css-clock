@@ -1,10 +1,8 @@
 function colorBackground(hour) {
-    const background = document.body;
     let topColor = null;
     let bottomColor = null;
 
     if (hour < 12) {
-        
         switch (hour) {
             case 17:
             topColor = "#0a5fcc";
@@ -24,7 +22,6 @@ function colorBackground(hour) {
             break;
         }
     } else {
-        
         switch (hour) {
             case 5:
             topColor = "#2200aa";
@@ -45,7 +42,9 @@ function colorBackground(hour) {
         }
     }
 
-    background.style.background = `linear-gradient(${topColor}, ${bottomColor})`;
+    console.log(topColor);
+
+    return `linear-gradient(${topColor}, ${bottomColor})`;
 }
 
 function findDegrees(units) {
@@ -57,6 +56,7 @@ function findDegrees(units) {
 function moveHands() {
     const now = new Date();
     
+    let background = document.body;
     const secondHand = document.querySelector('.second-hand');
     const minuteHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
@@ -68,12 +68,15 @@ function moveHands() {
     const minutesDegrees = findDegrees(minutes);
     
     const hours = now.getHours();
-    colorBackground(hours);
     const hoursDegrees = ((hours/12) * 360) + 90 + ((minutes/60) * 30);
-
+    
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    
+    if (minutes < 1 && seconds < 1) {
+        background.style.background = colorBackground(hours);
+    }
 }
 
 window.onload = setInterval(moveHands, 1000);
