@@ -9,8 +9,8 @@ function colorBackground(hour) {
             case 2:
             case 3:
             case 4:
-            topColor = "#0a5fcc";
-            bottomColor = top;  
+            topColor = "#2200aa";
+            bottomColor = top; 
             case 5:
             topColor = "#2200aa";
             bottomColor = "#aa3366";
