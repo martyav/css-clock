@@ -4,25 +4,13 @@ function colorBackground(hour) {
 
     if (hour < 12) {
         switch (hour) {
-            case 17:
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
             topColor = "#0a5fcc";
-            bottomColor = "#f2c779";
-            break;
-            case 18:
-            topColor = "#f2c779";
-            bottomColor = "#aa3366";
-            break;
-            case 19:
-            topColor = "#aa3366";
-            bottomColor = "#2200aa";
-            break;
-            default:
-            topColor = "#0a5fcc";
-            bottomColor = top;
-            break;
-        }
-    } else {
-        switch (hour) {
+            bottomColor = top;  
             case 5:
             topColor = "#2200aa";
             bottomColor = "#aa3366";
@@ -35,8 +23,26 @@ function colorBackground(hour) {
             topColor = "#f2c779";
             bottomColor = "#0a5fcc";
             break;
-            default:
+            case 17:
+            topColor = "#0a5fcc";
+            bottomColor = "#f2c779";
+            break;
+            case 18:
+            topColor = "#f2c779";
+            bottomColor = "#aa3366";
+            break;
+            case 19:
+            topColor = "#aa3366";
+            bottomColor = "#2200aa";
+            break;
+            case 20:
+            case 21:
+            case 22:
+            case 23:
             topColor = "#2200aa";
+            bottomColor = top;
+            default:
+            topColor = "#0a5fcc";
             bottomColor = top;
             break;
         }
