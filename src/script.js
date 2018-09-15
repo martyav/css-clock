@@ -9,7 +9,7 @@ function colorBackground(hour) {
     case 3:
     case 4:
       topColor = "#2200aa";
-      bottomColor = top;
+      bottomColor = topColor;
     case 5:
       topColor = "#2200aa";
       bottomColor = "#aa3366";
@@ -39,10 +39,10 @@ function colorBackground(hour) {
     case 22:
     case 23:
       topColor = "#2200aa";
-      bottomColor = top;
+      bottomColor = topColor;
     default:
       topColor = "#0a5fcc";
-      bottomColor = top;
+      bottomColor = topColor;
       break;
   }
 
