@@ -10,6 +10,7 @@ function colorBackground(hour) {
     case 4:
       topColor = "#2200aa";
       bottomColor = topColor;
+      break;
     case 5:
       topColor = "#2200aa";
       bottomColor = "#aa3366";
@@ -40,13 +41,12 @@ function colorBackground(hour) {
     case 23:
       topColor = "#2200aa";
       bottomColor = topColor;
+      break;
     default:
       topColor = "#0a5fcc";
       bottomColor = topColor;
       break;
   }
-
-  console.log(hour);
 
   return `linear-gradient(${topColor}, ${bottomColor})`;
 }
